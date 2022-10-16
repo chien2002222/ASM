@@ -1,0 +1,31 @@
+<div class="container col-md-10">
+  <form
+    class="card p-3 bg-light text-center mt-3 mb-3"
+    href="/boytoy/edit/{{boytoy._id}}"
+    method="post"
+  >
+    <h2 class="text-bg-success">Edit toy</h2>
+    <div class="form-group">
+      <label class="h3 text-secondary">Name</label>
+      <input type="text" name="name" class="form-control" required 
+      value="{{boytoys.name}}"
+      /></div>
+    <div class="form-group">
+      <label class="h3 text-secondary">Brand</label>
+      <input type="text" name="brand" class="form-control" required  value="{{boytoys.brand}}"/></div>
+    <div class="form-group">
+      <label class="h3 text-secondary">Price</label>
+      <input type="number" name="price" class="form-control" required   value="{{boytoys.price}}"/></div>
+    <div class="form-group">
+      <label class="h3 text-secondary">Image</label>
+      <br>
+      <img src="{{boytoys.image}}" width="100" height="100">
+      <br>
+      <input type="text" name="image" class="form-control" required value="{{boytoys.image}}"/></div>
+    <div class="form-group">
+      <label class="h3 text-secondary">Year</label>
+      <input type="number" name="year" class="form-control" required   value="{{boytoys.year}}"/></div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary mt-3" value="Edit" /></div>
+  </form>
+</div>

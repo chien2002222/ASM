@@ -1,0 +1,25 @@
+<h1 class="contain text-center mt-3">Toy List </h1>
+ <th colspan="4">
+         <select class="form-control" onchange="window.location.href=this.value">
+            <option value="">Sort by name</option>
+            <option value="/boytoy/sort/asc">Ascending</option>
+            <option value="/boytoy/sort/desc">Descending</option>
+         </select>
+      </th>
+<div class="row row-cols-1 row-cols-md-5 g-4 mt-5">
+    {{#each boytoys}}
+  <div class="col">
+    <div class="card">
+        <a href="/boytoy/detail/{{_id}}">
+            <img src="{{image}}" class="card-img-top" height="200" alt="...">
+        </a>
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">Price: $ {{price}}</p>
+        <button type="button" class="btn btn-success">Buy now</button>
+      </div>
+    </div>
+  </div>
+    {{/each}}
+ 
+</div>

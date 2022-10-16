@@ -1,0 +1,30 @@
+<table class="table table-bordered text-center">
+  <tr>
+    <th class="h1" colspan="3">Toy List</th>
+    
+    <th>
+      <a class="btn btn-success" href="/boytoy/add">Add</a>
+    </th>
+  </tr>
+  <tr>
+    <th>Toy Name</th>
+    <th>Toy Price</th>
+    <th>Toy Image</th>
+    <th>Menu</th>
+  </tr>
+  {{#each boytoys}}
+    <tr>
+      <td>{{name}}</td>
+      <td>$ {{price}}</td>
+      <td>
+        <a href="/boytoy/detail/{{_id}}">
+          <img src="{{image}}" width="100" height="100" />
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-warning" href="/boytoy/edit/{{_id}}">Edit</a>
+        <a class="btn btn-danger" href="/boytoy/delete/{{_id}}" onclick="return confirm('Are you sure to delete this mobile');">Delete</a>
+      </td>
+    </tr>
+  {{/each}}
+</table>
