@@ -5,7 +5,8 @@ var BoytoySchema = new mongoose.Schema(
     brand: String,
     image: String,
     price: Number,
-    year: Number
+    year: Number,
+    quantity: Number
   },
   {
     versionKey: false //optional (to remove _v: 0 when add new data)
