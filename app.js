@@ -13,7 +13,7 @@ var mongoose = require('mongoose')
 // const url = "mongodb://localhost:27017/test";
 
 var url =
-  'mongodb+srv://chiendvgch200793:chien2002@cluster0.r2e9w3r.mongodb.net/demo'
+  'mongodb+srv://chiendvgch200793:chien2002@cluster0.r2e9w3r.mongodb.net/test'
 mongoose.connect(url, { useNewUrlParser: true }, err => {
   if (!err) {
     console.log('DB connect succeed !')
